@@ -7,17 +7,17 @@ package lifecycle;
  */
 public class PojoSampleObject {
 
-  private String message;
+    private String message;
 
-  public void init() {
-    this.message = "PojoSampleObject.init() method called";
-  }
+    public void init() {
+        this.message = "PojoSampleObject.init() method called";
+    }
 
-  public void close() {
-    this.message = "PojoSampleObject.close() method called";
-  }
+    public void close() {
+        this.message = "PojoSampleObject.close() method called";
+    }
 
-  public String getMessage() {
-    return message;
-  }
+    public String getMessage() {
+        return message;
+    }
 }

@@ -10,14 +10,14 @@ import org.springframework.beans.factory.InitializingBean;
  */
 public class InitializingSampleObject implements InitializingBean {
 
-  private String message;
+    private String message;
 
-  @Override
-  public void afterPropertiesSet() throws Exception {
-    this.message = "InitializingSampleObject.afterPropertiesSet() method called";
-  }
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        this.message = "InitializingSampleObject.afterPropertiesSet() method called";
+    }
 
-  public String getMessage() {
-    return message;
-  }
+    public String getMessage() {
+        return message;
+    }
 }

@@ -9,13 +9,13 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class CircularDependencyConfig {
 
-  @Bean
-  public ACircularObject aCircularObject(BCircularObject bCircularObject) {
-    return new ACircularObject(bCircularObject);
-  }
+    @Bean
+    public ACircularObject aCircularObject(BCircularObject bCircularObject) {
+        return new ACircularObject(bCircularObject);
+    }
 
-  @Bean
-  public BCircularObject bCircularObject(ACircularObject aCircularObject) {
-    return new BCircularObject(aCircularObject);
-  }
+    @Bean
+    public BCircularObject bCircularObject(ACircularObject aCircularObject) {
+        return new BCircularObject(aCircularObject);
+    }
 }

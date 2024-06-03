@@ -43,9 +43,9 @@ class Lifecycle : FreeSpec({
             val pojoSampleObject = applicationContext.getBean(PojoSampleObject::class.java)
             val postConstructSampleObject = applicationContext.getBean(PostConstructSampleObject::class.java)
 
-            initializingSampleObject.message shouldBe "InitializingSampleObject.afterPropertiesSet() method called"
-            pojoSampleObject.message shouldBe "PojoSampleObject.init() method called"
-            postConstructSampleObject.message shouldBe "PostConstructSampleObject.init() method called"
+            initializingSampleObject.message shouldBe ""
+            pojoSampleObject.message shouldBe ""
+            postConstructSampleObject.message shouldBe ""
         }
 
         """
@@ -72,9 +72,9 @@ class Lifecycle : FreeSpec({
             // 소멸 콜백 테스트를 위해 ApplicaionContext를 종료합니다.
             applicationContext.close()
 
-            disposableSampleObject.message shouldBe "DisposableSampleObject.destroy() method called"
-            pojoSampleObject.message shouldBe "PojoSampleObject.close() method called"
-            preDestroySampleObject.message shouldBe "PostConstructSampleObject.close() method called"
+            disposableSampleObject.message shouldBe ""
+            pojoSampleObject.message shouldBe ""
+            preDestroySampleObject.message shouldBe ""
         }
     }
 })

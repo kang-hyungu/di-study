@@ -31,7 +31,7 @@ class Introduction : FreeSpec({
         val sampleObject = beanFactory.getBean("sampleObject", SampleObject::class.java)
 
         // 조회한 Bean 객체가 SampleObject 타입인지 확인합니다.
-        sampleObject.shouldBeTypeOf<SampleObject>()
+        sampleObject.shouldBeTypeOf<Object>()
     }
 
     """
@@ -50,10 +50,10 @@ class Introduction : FreeSpec({
         val sampleObject = applicationContext.getBean("sampleObject", SampleObject::class.java)
 
         // 조회한 Bean 객체가 SampleObject 타입인지 확인합니다.
-        sampleObject.shouldBeTypeOf<SampleObject>()
+        sampleObject.shouldBeTypeOf<Object>()
 
         // ApplicationContext가 BeanFactory를 포함하는지 확인합시다.
-        applicationContext.shouldBeInstanceOf<BeanFactory>()
+        applicationContext.shouldBeInstanceOf<Object>()
     }
 
     """
@@ -73,6 +73,6 @@ class Introduction : FreeSpec({
         // beanObject 객체는 Bean입니다.
         val beanObject = applicationContext.getBean("sampleObject", SampleObject::class.java)
 
-        applicationContext.containsBean("sampleObject") shouldBe true
+        applicationContext.containsBean("sampleObject") shouldBe false
     }
 })

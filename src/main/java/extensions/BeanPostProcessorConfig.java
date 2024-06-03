@@ -7,6 +7,6 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("extensions")
 public class BeanPostProcessorConfig {
 
-  @CustomAnnotation
-  private String customAnnotationField;
+    @CustomAnnotation
+    private String customAnnotationField;
 }

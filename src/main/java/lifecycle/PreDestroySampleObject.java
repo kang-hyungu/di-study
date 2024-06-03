@@ -9,14 +9,14 @@ import jakarta.annotation.PreDestroy;
  */
 public class PreDestroySampleObject {
 
-  private String message;
+    private String message;
 
-  @PreDestroy
-  public void close() {
-    this.message = "PostConstructSampleObject.close() method called";
-  }
+    @PreDestroy
+    public void close() {
+        this.message = "PostConstructSampleObject.close() method called";
+    }
 
-  public String getMessage() {
-    return message;
-  }
+    public String getMessage() {
+        return message;
+    }
 }

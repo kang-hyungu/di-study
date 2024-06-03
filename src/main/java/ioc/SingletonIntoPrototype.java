@@ -10,14 +10,14 @@ import org.springframework.stereotype.Component;
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class SingletonIntoPrototype {
 
-  private final SampleObject singletonBean;
+    private final SampleObject singletonBean;
 
-  @Autowired
-  public SingletonIntoPrototype(@Qualifier("singletonBean") SampleObject singletonBean) {
-    this.singletonBean = singletonBean;
-  }
+    @Autowired
+    public SingletonIntoPrototype(@Qualifier("singletonBean") SampleObject singletonBean) {
+        this.singletonBean = singletonBean;
+    }
 
-  public SampleObject getSingletonBean() {
-    return singletonBean;
-  }
+    public SampleObject getSingletonBean() {
+        return singletonBean;
+    }
 }

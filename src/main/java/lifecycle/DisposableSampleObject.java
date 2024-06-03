@@ -7,14 +7,14 @@ import org.springframework.beans.factory.DisposableBean;
  */
 public class DisposableSampleObject implements DisposableBean {
 
-  private String message;
+    private String message;
 
-  @Override
-  public void destroy() throws Exception {
-    this.message = "DisposableSampleObject.destroy() method called";
-  }
+    @Override
+    public void destroy() throws Exception {
+        this.message = "DisposableSampleObject.destroy() method called";
+    }
 
-  public String getMessage() {
-    return message;
-  }
+    public String getMessage() {
+        return message;
+    }
 }

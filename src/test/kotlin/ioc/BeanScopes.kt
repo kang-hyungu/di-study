@@ -46,7 +46,7 @@ class BeanScopes : FreeSpec({
         val secondSingletonObject = applicationContext.getBean("singletonBean", SampleObject::class.java)
 
         // 싱글톤 스코프로 정의된 Bean은 여러 번 요청해도 동일한 인스턴스를 반환합니다.
-        firstSingletonObject shouldBe null // secondSingletonObject
+        firstSingletonObject shouldNotBe secondSingletonObject
     }
 
     """
@@ -66,7 +66,7 @@ class BeanScopes : FreeSpec({
         val secondPrototypeObject = applicationContext.getBean("prototypeBean", SampleObject::class.java)
 
         // 프로토타입 스코프로 정의된 Bean은 요청할 때마다 새로운 인스턴스를 생성합니다.
-        firstPrototypeObject shouldNotBe null // secondPrototypeObject
+        firstPrototypeObject shouldBe secondPrototypeObject
     }
 
     """

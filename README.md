@@ -2,12 +2,15 @@
 
 ## 준비 사항
 
+- JDK 17
 - IntelliJ에 Kotest 플러그인 설치
 
 ## 학습 테스트
 
 스프링 IoC 컨테이너에 대해 좀 더 자세히 알아봅시다.
 학습 테스트는 ioc 패키지 또는 클래스 단위로 실행하세요.
+모든 테스트를 통과하도록 바꿔보세요.
+그리고 테스트가 왜 통과하는지 분석해보세요.
 
 1. [스프링 IoC 컨테이너와 Bean 소개](src/test/kotlin/ioc/Introduction.kt)
 2. [컨테이너 개요](src/test/kotlin/ioc/Container.kt)

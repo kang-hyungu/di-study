@@ -8,14 +8,14 @@ import java.util.Map;
 @Service
 public class MessageService {
 
-  private final Map<String, MessageSender> messageSenders;
+    private final Map<String, MessageSender> messageSenders;
 
-  @Autowired
-  public MessageService(final Map<String, MessageSender> messageSenders) {
-    this.messageSenders = messageSenders;
-  }
+    @Autowired
+    public MessageService(final Map<String, MessageSender> messageSenders) {
+        this.messageSenders = messageSenders;
+    }
 
-  public MessageSender getMessageSender(final String name) {
-    return messageSenders.get(name);
-  }
+    public MessageSender getMessageSender(final String name) {
+        return messageSenders.get(name);
+    }
 }

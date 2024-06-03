@@ -9,14 +9,14 @@ import jakarta.annotation.PostConstruct;
  */
 public class PostConstructSampleObject {
 
-  private String message;
+    private String message;
 
-  @PostConstruct
-  public void init() {
-    this.message = "PostConstructSampleObject.init() method called";
-  }
+    @PostConstruct
+    public void init() {
+        this.message = "PostConstructSampleObject.init() method called";
+    }
 
-  public String getMessage() {
-    return message;
-  }
+    public String getMessage() {
+        return message;
+    }
 }

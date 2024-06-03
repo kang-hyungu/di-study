@@ -50,7 +50,7 @@ class JavaBasedConfiguration : FreeSpec({
             val firstLiteBean = applicationContext.getBean("viewResolver", ViewResolver::class.java)
             val secondLiteBean = applicationContext.getBean("viewResolver", ViewResolver::class.java)
 
-            firstLiteBean shouldBe secondLiteBean
+            firstLiteBean shouldNotBe secondLiteBean
         }
 
         """
@@ -67,7 +67,7 @@ class JavaBasedConfiguration : FreeSpec({
             // anotherViewResolver() 메서드 내부에서 viewResolver() 메서드를 호출하더라도 동일한 Bean을 반환하지 않습니다.
             val anotherViewResolver = applicationContext.getBean("anotherViewResolver", ViewResolver::class.java)
 
-            viewResolver shouldNotBe anotherViewResolver
+            viewResolver shouldBe anotherViewResolver
         }
 
         """
@@ -83,14 +83,14 @@ class JavaBasedConfiguration : FreeSpec({
             val firstAnotherViewResolver = applicationContext.getBean("anotherViewResolver", ViewResolver::class.java)
 
             // FullModeConfig 클래스의 anotherViewResolver() 메서드는 싱글톤 Bean으로 등록됩니다.
-            viewResolver shouldBe firstAnotherViewResolver
+            viewResolver shouldNotBe firstAnotherViewResolver
 
             val fullModeConfig = applicationContext.getBean("fullModeConfig", FullModeConfig::class.java)
 
             // @Configuration 클래스인 fullModeConfig Bean으로 직접 anotherViewResolver() 메서드를 호출해도 동일한 Bean을 반환합니다.
             val secondAnotherViewResolver = fullModeConfig.anotherViewResolver()
 
-            firstAnotherViewResolver shouldBe secondAnotherViewResolver
+            firstAnotherViewResolver shouldNotBe secondAnotherViewResolver
         }
 
         """
@@ -105,7 +105,7 @@ class JavaBasedConfiguration : FreeSpec({
             val notBean = service.anotherViewResolver()
 
             // @Configuration 클래스에서 선언한 @Bean 메서드와 달리 @Service 클래스에서 선언한 @Bean 메서드는 단순 팩터리 메서드로 동작합니다.
-            liteBean shouldNotBe notBean
+            liteBean shouldBe notBean
         }
     }
 })

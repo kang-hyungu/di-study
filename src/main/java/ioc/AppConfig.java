@@ -8,18 +8,18 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = {"ioc"})
 public class AppConfig {
 
-  @Bean
-  public SampleObject sampleObject() {
-    return new SampleObject();
-  }
+    @Bean
+    public SampleObject sampleObject() {
+        return new SampleObject();
+    }
 
-  @Bean(name = {"firstName", "secondName"})
-  public SampleObject sampleAlias() {
-    return new SampleObject();
-  }
+    @Bean(name = {"firstName", "secondName"})
+    public SampleObject sampleAlias() {
+        return new SampleObject();
+    }
 
-  @Bean
-  public SampleFactoryObject sampleFactoryObject() {
-    return SampleFactoryObject.create();
-  }
+    @Bean
+    public SampleFactoryObject sampleFactoryObject() {
+        return SampleFactoryObject.create();
+    }
 }

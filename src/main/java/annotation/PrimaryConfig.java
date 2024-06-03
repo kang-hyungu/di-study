@@ -9,25 +9,25 @@ import org.springframework.context.annotation.Primary;
 @Configuration
 public class PrimaryConfig {
 
-  private MovieCatalog movieCatalog;
+    private MovieCatalog movieCatalog;
 
-  @Bean
-  @Primary
-  public MovieCatalog firstMovieCatalog() {
-    return new MovieCatalog();
-  }
+    @Bean
+    @Primary
+    public MovieCatalog firstMovieCatalog() {
+        return new MovieCatalog();
+    }
 
-  @Bean
-  public MovieCatalog secondMovieCatalog() {
-    return new MovieCatalog();
-  }
+    @Bean
+    public MovieCatalog secondMovieCatalog() {
+        return new MovieCatalog();
+    }
 
-  @Autowired
-  public void setMovieCatalog(final MovieCatalog movieCatalog) {
-    this.movieCatalog = movieCatalog;
-  }
+    @Autowired
+    public void setMovieCatalog(final MovieCatalog movieCatalog) {
+        this.movieCatalog = movieCatalog;
+    }
 
-  public MovieCatalog getMovieCatalog() {
-    return movieCatalog;
-  }
+    public MovieCatalog getMovieCatalog() {
+        return movieCatalog;
+    }
 }
