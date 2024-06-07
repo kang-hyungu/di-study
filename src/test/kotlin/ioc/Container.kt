@@ -11,7 +11,7 @@ import org.springframework.context.support.GenericXmlApplicationContext
  *
  * 스프링 애플리케이션은 ApplicationContext 인터페이스를 스프링 IoC 컨테이너로 사용합니다.
  * 스프링 IoC 컨테이너를 줄여서 컨테이너(container)라고 부르기도 합니다.
- * 컨테이너는 스프링이 아닌 다른 것(WAS 등)을 의미할 수 있으니 맥락에 따라 구분 해야 합니다.
+ * 컨테이너는 스프링이 아닌 다른 기술(WAS 등)을 의미할 수 있으니 맥락에 따라 구분 해야 합니다.
  *
  * 애플리케이션 코드에서 ApplicationContext 인터페이스를 직접 사용하는 일은 거의 없습니다.
  * 실제로 애플리케이션 코드는 getBean() 메서드 호출이 전혀 없어야 하며, Spring API에 대한 종속성도 없어야 합니다.

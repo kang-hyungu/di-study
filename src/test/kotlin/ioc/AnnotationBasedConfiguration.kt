@@ -132,7 +132,7 @@ class AnnotationBasedConfiguration : FreeSpec({
         val qualifierConfig = applicationContext.getBean(QualifierConfig::class.java)
         val movieCatalog = qualifierConfig.movieCatalog
 
-        movieCatalog.shouldBeTypeOf<Object>()
+        movieCatalog shouldBe applicationContext.getBean("")
     }
 
     """

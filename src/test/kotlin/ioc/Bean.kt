@@ -66,10 +66,10 @@ class Bean : FreeSpec({
 
     """
     Bean 이름 지정하기
-    모든 Bean은 하나 이상의 이름(name)과 하나의 식별자(id)가 있다. 식별자는 컨테이너 내에서 고유해야 합니다.
+    모든 Bean은 하나 이상의 이름(name)과 하나의 식별자(id)가 있습니다. 식별자는 컨테이너 내에서 고유해야 합니다.
     Bean 이름이나 id를 생략하면 컨테이너는 자동으로 Bean의 고유한 이름을 생성합니다.
     
-    Bean 이름 규칙은 표준 Java 규칙을 사용한다. Bean 이름은 CamelCase로 작성합니다.
+    Bean 이름 규칙은 표준 Java 규칙을 사용합니다. Bean 이름은 CamelCase로 작성합니다.
     예시) accountManager, accountService, userDao, loginController
     
     일관된 Bean 이름은 구성(Configuration)을 더 쉽게 읽고 이해할 수 있습니다.
@@ -80,7 +80,7 @@ class Bean : FreeSpec({
 
     """
     Bean 별칭(Alias) 지정하기
-    Bean 이름 외에 추가적인 이름을 지정할 수 있다. 이를 별칭(alias)이라 합니다.
+    Bean 이름 외에 추가적인 이름을 지정할 수 있습니다. 이를 별칭(alias)이라 합니다.
     별칭은 애플리케이션의 각 구성 요소가 특정 이름으로 공통 종속성을 참조하는 등 일부 상황에 유용합니다.
     예를 들어 메인 애플리케이션에서 구성한 dataSource를 새로운 하위 시스템에서 접근할 때 별칭을 사용할 수 있습니다.
     각 컴포넌트와 메인 애플리케이션은 고유하고 다른 bean definition과 충돌나지 않도록 보장된 이름으로 데이터 소스를 참조할 수 있습니다.

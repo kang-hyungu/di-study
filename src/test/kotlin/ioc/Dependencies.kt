@@ -52,7 +52,6 @@ class Dependencies : FreeSpec({
         생성자 기반 의존성 주입(Constructor-based Dependency Injection)
         생성자 기반 DI는 컨테이너가 각각 의존성을 나타내는 여러 인수를 생성자로 전달하며 수행됩니다.
         특정 인수를 사용하여 정적 팩토리 메서드를 호출하여 빈을 생성할 때도 거의 동일합니다.
-        @see ConstructorMovieLister
         """ {
             // @ComponentScan으로 ConstructorMovieLister와 DefaultMovieFinder를 찾아서 Bean으로 등록하고 의존성을 주입합니다.
             val applicationContext = AnnotationConfigApplicationContext(AppConfig::class.java)
@@ -70,7 +69,6 @@ class Dependencies : FreeSpec({
         설정자 기반 DI는 생성자 기반 DI 보다 더 유연하게 의존성을 설정할 수 있습니다.
         생성자 기반 DI는 빈을 생성할 때 모든 의존성을 지정해야 하지만 설정자 기반 DI는 필요한 의존성만 지정할 수 있습니다.
         하지만 의존성이 지정되기 전에 객체의 기능을 사용하면 런타임 오류가 발생할 수 있습니다.
-        @see SetterMovieLister
         """ {
             // @ComponentScan으로 SetterMovieLister와 DefaultMovieFinder를 찾아서 Bean으로 등록하고 의존성을 주입합니다.
             val applicationContext = AnnotationConfigApplicationContext(AppConfig::class.java)
